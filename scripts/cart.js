@@ -40,8 +40,8 @@ export function decreaseItem(itemId) {
     }
   })
   calculateCartQuantity();
-  //test commmit
 }
+//commit 2
 
 export function calculateCartQuantity() {
   let cartQuantity = 0;
