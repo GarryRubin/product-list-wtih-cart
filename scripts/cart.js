@@ -41,7 +41,7 @@ export function decreaseItem(itemId) {
   })
   calculateCartQuantity();
 }
-//commit 2
+//commit 11
 
 export function calculateCartQuantity() {
   let cartQuantity = 0;
