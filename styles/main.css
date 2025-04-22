@@ -1,0 +1,393 @@
+body{
+  display:  flex;
+  padding: 50px;
+  gap: 20px;
+}
+
+.overlay{
+  background-color: black;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+h1{
+  font-size: 25px;
+}
+
+h3{
+  margin: 5px 0px;
+  color: hsl(14, 86%, 42%);
+}
+
+.main{
+  
+  flex: 1;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+.item-container{
+  position: relative;
+  .thumbnail-img{
+    height: 140px;
+    width: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+  }
+
+  p{
+    margin: 2px 0;
+  }
+  .add-btn{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 7px 13px;
+
+    position: absolute;
+    bottom: 60px;
+    left: 28px;
+
+    border: solid 1px hsl(14, 86%, 42%);
+    border-radius: 15px;
+
+    background-color: white;
+
+    font-size: 8px;
+    font-weight: 600;
+    
+    cursor: pointer;
+  }
+
+  .add-btn:hover{
+    color: hsl(14, 86%, 42%);
+  }
+
+  .btn-img{
+    height: 12px;
+  }
+
+  /* design for button when clicked */
+  .item-count-selector{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+    height: 12px;
+    padding: 7px 5px;
+
+    position: absolute;
+    bottom: 60px;
+    left: 26px;
+
+    border: solid 1px hsl(14, 86%, 42%);
+    border-radius: 15px;
+
+    background-color: hsl(14, 86%, 42%);
+    color: white;
+
+    font-size: 8px;
+  }
+
+  .decrement-btn, .increment-btn{
+    display: flex;
+    justify-content: center;
+
+    height: 12px;
+    width: 12px;
+    padding: 2px;
+
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px white;
+    border-radius: 20px;
+
+    cursor: pointer;
+  }
+  
+  .decrement-img, .increment-img{
+    width: 5px;
+  }
+
+  .item-name-short{
+    font-size: 8px;
+    color: gray;
+  }
+
+  .item-name{
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .price{
+    font-size: 12px;
+    color: hsl(14, 86%, 42%);
+    font-weight: 600;
+  }
+}
+
+
+.cart{
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 240px;
+  height: fit-content;
+
+  .cart-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+      font-size: 10px;
+      margin: 4px 0px;
+    }
+  }
+
+  .cart-title{
+    margin-bottom: 13px;
+  }
+
+  .cart-item-name{
+    font-weight: 600;
+  }
+
+  .cart-item-details{
+    display: flex;
+    gap: 7px;
+  }
+
+  .cart-item-quantity{
+    padding-right: 5px;
+    color: hsl(14, 86%, 42%);
+    font-weight: bold;
+  }
+
+  .cart-item-price{
+    color: gray;
+  }
+
+  .cart-item-total-price{
+    color: hsl(12, 20%, 44%);
+    font-weight: 600;
+  }
+
+  .remove-item-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: none;
+    border: solid 1px hsl(14, 25%, 72%);
+    border-radius: 20px;
+    height: 13px;
+    width: 13px;
+    cursor: pointer;
+  }
+
+  .remove-item-btn:hover{
+    border-color: black;
+  }
+
+  .remove-item-img{
+    height: 8px;
+  }
+
+  hr{
+    border-top: 1px solid  rgba(221, 221, 221, 0.6);
+    margin-bottom: 14px;
+  }
+
+  .order-total, .carbon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .order-total{
+    height: 40px;
+    margin-bottom: 14px;
+  }
+  
+  .order-total-text{
+    font-size: 12px;
+  }
+
+  .order-price{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .carbon{
+    justify-content: center;
+
+    background-color: hsl(20, 50%, 98%);
+    padding: 8px 15px;
+    border-radius: 7px;
+    margin-bottom: 14px;
+  }
+
+  .carbon-icon{
+    height: 15px;
+  }
+
+  .carbon-text{
+    font-size: 10px;
+    margin: 5px 0;
+  }
+
+  .confirm-order-btn{
+    width: 100%;
+    border: none;
+    background-color: brown;
+    color: white;
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .confirm-order-btn:hover{
+    background-color: rgb(206, 55, 55);
+  }
+}
+/* when cart is empty */
+.empty-cart-img{
+  display: block;
+  margin: auto;
+}
+.empty-par{
+  font-size: 10px;
+  font-weight: 500;
+  color: rgb(161, 126, 73);
+  text-align: center;
+}
+
+/* styling order confirmed div */
+.order-confirmed-container{
+  position: fixed;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 2;
+  
+  .order-confrirmed-img{
+    height: 30px;
+  }
+  
+  .order-title{
+    font-size: 25px;
+    margin: 5px 0;
+  }
+  .title-par{
+    font-size: 10px;
+    margin-bottom: 12px;
+    color: rgb(127, 78, 0);
+  }
+
+  .order-list{
+    background-color: hsl(30, 8%, 95%);
+    border-radius: 5px;
+    padding: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  .order-item{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  hr{
+    border-top: 1px solid  rgba(221, 221, 221, 0.9);
+    margin-bottom: 14px;
+  }
+
+  .order-item-img{
+    height: 30px;
+    width: 30px;
+    border-radius: 2px;
+    object-fit: cover;
+  }
+
+  .order-item-name{
+    font-weight: 600;
+    font-size: 10px;
+    margin: 0;
+  }
+
+  /* .order-item-details{
+    display: flex;
+    gap: 7px;
+  } */
+
+  .order-item-quantity{
+    padding-right: 5px;
+    color: hsl(14, 86%, 42%);
+    font-weight: bold;
+    font-size: 10px;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .order-item-price{
+    color: gray;
+    font-size: 10px;
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
+  .order-item-total-price{
+    color: black;
+    font-weight: 600;
+    font-size: 10px;
+    margin-left: auto;
+    align-self: center;
+  }
+
+  .order-total-2{
+    display: flex;
+    justify-content: space-between;
+
+    .order-total-par{
+      font-size: 12px;
+    }
+
+    .order-total-price{
+      font-weight: 600;
+    }
+
+  }
+
+  .new-order-btn{
+    width: 100%;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  .new-order-btn:hover{
+    background-color: rgb(206, 55, 55)
+  }
+
+
+}

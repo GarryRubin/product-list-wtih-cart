@@ -1,0 +1,9 @@
+*{
+  font-family: Red Hat Text;
+}
+body{
+  background-color: hsl(20, 50%, 98%);
+}
+p{
+  margin: 5px 0;
+}
